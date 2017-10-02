@@ -1,0 +1,69 @@
+<!--触发action-sheet事件-->
+<button type="primary" bindtap="listenerButton">个人中心</button>
+<!--默认action-sheet为隐藏，由button触发-->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
+
+    <block wx:for-items="{{actionSheetItems}}" wx:key="*this" > 
+        <action-sheet-item  data-item="{{item}}" bindtap="bindItem">{{item}}</action-sheet-item>
+    </block>
+
+    <!--自动隐藏action-sheet-->
+    <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>
+<view class="container" wx:if="{{queueQueryDialog}}">
+    <form bindsubmit="formSubmit" bindreset="formReset" class="weui-cells">
+       <view class="queue">
+            <view class="query-title">
+                <text>队列查看</text>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-label">车牌号：</view>
+                <input  bindblur="inputHandler" name="input" placeholder="请输入..." />
+            </view>
+            <view class="weui-cell">
+                <view class="weui-label">日期：</view>
+                <picker id="date" mode="date" value="{{formData.getNumTime}}" start="2015-09-01" end="2017-09-01"   bindchange="bindPickerChange">
+                    <view class="picker">
+                        当前选择: {{formData.getNumTime}}
+                    </view>
+                </picker>
+            </view>
+            <view class="weui-cell" >
+                <view class="weui-label">园区：</view>
+                <picker id="park" mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{parks}}"  range-key="parkName">
+                <view class="picker">
+                    当前选择：{{selectedParkName}}
+                </view>
+                </picker>
+            </view>
+           
+      </view>
+
+      <button  type="primary"  bindtap="query">查询</button>
+    </form>
+
+</view>
+
+<view class="weui-dialog" wx:if="{{personnalInfoDialog}}">
+  <view class="mask"></view>
+
+  <view class="modal-style weui-cells">
+     <view class="weui-dialog__hd"><view id="queue-dialog-title" class="weui-dialog__title">个人信息    </view></view>
+     <view class="only-cell" wx:if="{{personnalInfo.driverName}}">
+          <view class="weui-label">司机姓名：</view>
+          <view  name="input">{{personnalInfo.driverName}}</view>
+     </view>
+     <view class="only-cell" wx:if="{{personnalInfo.driverMobile}}">
+          <view class="weui-label">手机号码：</view>
+          <view class="weui-label">{{personnalInfo.driverMobile}}</view>
+     </view>
+     <view class="only-cell" wx:if="{{personnalInfo.vehicleBrandNo}}">
+          <view class="weui-label">车牌号：</view>
+          <view>{{personnalInfo.vehicleBrandNo}}</view>
+     </view>
+     
+     <view class="weui-dialog__ft">
+        <view class="weui-dialog__btn weui-dialog__btn_primary" bindtap="hideDialog">确定</view>
+     </view>
+  </view>
+  </view>

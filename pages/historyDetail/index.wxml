@@ -1,0 +1,28 @@
+<!--detail begin-->
+
+<view class="weui-form-preview">
+     <view class="weui-form-preview__hd">
+         <view class="weui-form-preview__itview">
+             <label class="weui-form-preview__label">订单号</label><view class="weui-form-preview__value">{{detail.orderId}}</view>
+         </view>
+     </view>
+     <view class="weui-form-preview__bd">
+         <view class="weui-form-preview__itview">
+              <label class="weui-form-preview__label">车牌号</label><view class="weui-form-preview__value">{{detail.vehicleBrandNo}}</view>
+         </view>
+         <view class="weui-form-preview__itview">
+              <label class="weui-form-preview__label">仓库</label><view class="weui-form-preview__value">{{detail.whName}}</view>
+         </view>
+         <view class="weui-form-preview__itview">
+               <label class="weui-form-preview__label">司机</label><view class="weui-form-preview__value">{{detail.driverName}}</view>
+         </view>
+         
+     </view>
+</view>
+
+<view class="weui-cells" wx:for="{{detailContent}}">
+      <view class="weui-cell">
+           <view class="weui-cell__bd"><view>{{item.time}}</view></view><view class="weui-cell__ft">{{item.type}}</view>
+      </view>
+</view>
+<!--detail end-->

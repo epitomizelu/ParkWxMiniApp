@@ -1,0 +1,29 @@
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color:blue;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:red;
+}
+
+.btn-area{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 40%;
+
+}
+
+.btn-area button{
+    margin: 0.5em;
+}
+
+.modal-style .only-cell{
+    height:0.7em;
+    padding: 5px 10px;
+    font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+}
+
+.modal-style .switch{
+    margin-top: 10px;
+}

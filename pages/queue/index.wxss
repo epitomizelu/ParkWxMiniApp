@@ -1,0 +1,15 @@
+/* pages/queue/index.wxss */
+.queue{
+    margin-top: 30%;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 3px;
+}
+
+button{
+    margin-top: 3%;
+}
+
+view.only-cell{
+    padding: 0;
+}

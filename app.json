@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/logs/logs",
+    "pages/scan/index",
+    "pages/queue/index",
+    "pages/message/index",
+    "pages/history/index",
+    "pages/historyList/index",
+    "pages/historyDetail/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#E2F3FF",
+    "navigationBarTitleText": "安得物流园",
+    "navigationBarTextStyle":"black"
+     
+  },
+  "tabBar": {  
+   "color": "#a9b7b7",  
+   "selectedColor": "#11cd6e",  
+   "borderStyle":"white",  
+   "list": [{  
+     "selectedIconPath": "resource/images/todolistSel.png",  
+     "iconPath": "resource/images/todolist.png",  
+     "pagePath": "pages/index/index",  
+     "text": "代办事项"  
+   }, {  
+     "selectedIconPath": "resource/images/userSel.png",  
+     "iconPath": "resource/images/user.png",  
+     "pagePath": "pages/user/user",  
+     "text": "个人中心"  
+   }]  
+ } 
+}

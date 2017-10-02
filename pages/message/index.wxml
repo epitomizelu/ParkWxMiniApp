@@ -1,0 +1,12 @@
+<!--pages/message/index.wxml-->
+<view class="weui-form-preview" wx:for="{{messageInfos}}" bindtap="showMesDetail" data-index="{{index}}">
+     <view class="weui-form-preview__hd">
+         <view class="weui-form-preview__item">
+	      <view class="weui-form-preview__label date">{{item.msgSendDate}}</view> 
+              <view class="weui-form-preview__value message_title">{{item.msgTitle}}</view>
+         </view>
+     </view>
+     <view class="weui-form-preview__bd">
+         <view class="weui-form-preview__item message_abstract">{{item.msgContent}}</view>
+     </view>
+</view>

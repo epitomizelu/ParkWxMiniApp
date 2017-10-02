@@ -1,0 +1,85 @@
+<template name="modalMessageBox">
+<view class="weui-dialog" wx:if="{{display}}">
+  <view class="mask"></view>
+  <view class="modal-style weui-cells">
+     <view class="only-cell">
+          <view class="weui-label" wx:if="{{orderId}}">订单号：</view>
+          <view  name="input">{{orderId}}</view>
+     </view>
+     <view class="only-cell" wx:if="{{vehicleBrandNo}}">
+          <view class="weui-label">车牌号：</view>
+          <view  name="input">{{vehicleBrandNo}}</view>
+     </view>
+     <view class="only-cell">
+          <view class="weui-label"  wx:if="{{driverName}}">司机：</view>
+          <view  name="input">{{driverName}}</view>
+     </view>
+     <view class="only-cell" wx:if="{{driverMobile}}">
+          <view class="weui-label">手机号：</view>
+          <view  name="input">{{driverMobile}}</view>
+     </view>
+
+     <view class="only-cell" wx:if="{{whName}}">
+          <view class="weui-label">仓库：</view>
+          <view  name="input">{{whName}}</view>
+     </view>
+     <view class="only-cell" wx:if="{{platForm}}">
+          <view class="weui-label">月台：</view>
+          <view  name="input">{{platForm}}</view>
+     </view>
+     <view class="only-cell"  wx:if="{{workType}}">
+          <view class="weui-label">作业类型：</view>
+          <view  name="input">{{workType}}</view>
+     </view>
+     <view class="only-cell" wx:if="{{handlingGroupName}}">
+          <view class="weui-label">装卸组：</view>
+          <view  name="input">{{handlingGroupName}}</view>
+     </view>
+
+     <view class="only-cell" wx:if="{{isCoverPonchos}}"> 
+          <view class="weui-label">是否盖雨布：</view>
+          <view  name="input">{{isCoverPonchos?"是":"否"}}</view>
+     </view>
+     <view class="only-cell" wx:if="{{}}">
+          <view class="weui-label">入园时间：</view>
+          <view  name="input">2016.10.10 16.09</view>
+     </view>
+     <view class="only-cell"  wx:if="{{workTime}}">
+          <view class="weui-label">作业时间：</view>
+          <view  name="input">{{workTime}}</view>
+     </view>
+     <view class="only-cell">
+          <view class="weui-label">作业开始时间：</view>
+          <view  name="input">2016.10.10 16.09</view>
+     </view>
+     <view class="only-cell">
+          <view class="weui-label">装卸组到达时间：</view>
+          <view  name="input">2016.10.10 16.09</view>
+     </view>
+     <view class="only-cell">
+          <view class="weui-label">作业结束时间：</view>
+          <view  name="input">2016.10.10 16.09</view>
+     </view>
+     <view class="only-cell">
+          <view class="weui-label">盖雨布开始时间：</view>
+          <view  name="input">2016.10.10 16.09</view>
+     </view>
+     <view class="only-cell">
+          <view class="weui-label">盖雨布结束时间：</view>
+          <view  name="input">2016.10.10 16.09</view>
+     </view>
+     <view class="only-cell">
+          <view class="weui-label">是否插队：</view>
+          <view  name="input">是</view>
+     </view>
+     
+     <view class="weui-dialog__ft">
+        <view class="weui-dialog__btn weui-dialog__btn_default">取消</view>
+        <view class="weui-dialog__btn weui-dialog__btn_primary">确认</view>
+     </view>
+  </view>
+  </view>
+</template>
+
+
+

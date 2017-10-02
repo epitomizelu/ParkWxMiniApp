@@ -1,0 +1,44 @@
+<view class="container">
+    <form bindsubmit="formSubmit" bindreset="formReset" class="weui-cells">
+       
+
+      <view class="history">
+            <view class="query-title">
+                <text>历史记录</text>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-label">订单号：</view>
+                <input bindblur="inputHandler" name="input" placeholder="please input here" />
+            </view>
+            <view class="weui-cell">
+                <view class="weui-label">日期(从)：</view>
+                <picker id="dateFrom" mode="date" value="{{formData.getNumTimeFrom}}" start="2015-09-01" end="2017-09-01"   bindchange="bindPickerChange">
+                    <view class="picker">
+                        当前选择: {{formData.getNumTimeFrom}}
+                    </view>
+                </picker>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-label">日期(到)：</view>
+                <picker id="dateTo" mode="date" value="{{formData.getNumTimeTo}}" start="2015-09-01" end="2017-09-01"   bindchange="bindPickerChange">
+                    <view class="picker">
+                          当前选择: {{formData.getNumTimeTo}}
+                    </view>
+                </picker>
+            </view>
+            <view class="weui-cell" >
+                <view class="weui-label">园区：</view>
+                <picker id="parkCode" mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{parks}}" range-key="parkName">
+                <view class="picker">
+                    当前选择：{{parkName}}
+                </view>
+                </picker>
+            </view>
+           
+      </view>
+           <button  type="primary"  bindtap="queryHistory">查询</button>
+    </form>
+
+</view>
+ 
+
